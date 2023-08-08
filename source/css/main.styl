@@ -47,13 +47,13 @@ for $inject_style in hexo-config('injects.style')
   @import $inject_style;
 
 
-// fix img style 
-
+// Fix img style 
 .post-body img {
   display: inline-block;
 }
 
-.post-body>img {
+.post-body>img, .post-body>p>img {
   display: block;
+  max-height: 480px;
 }
 
