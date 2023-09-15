@@ -67,6 +67,7 @@
     data-page-id="{{ page.path }}"
     data-page-url="{{ page.permalink }}"
     data-page-title="{{ page.title }}"
+    style="margin-top: 4rem;"
   ></div>
 {%- endif -%}
 
