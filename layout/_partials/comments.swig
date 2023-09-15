@@ -60,6 +60,16 @@
   {%- endif %}
 {%- endif %}
 
+{%- if theme.cusdis.app_id %}
+  <div id="cusdis_thread"
+    data-host="{{ theme.cusdis.host}}"
+    data-app-id="{{ theme.cusdis.app_id }}"
+    data-page-id="{{ page.path }}"
+    data-page-url="{{ page.permalink }}"
+    data-page-title="{{ page.title }}"
+  ></div>
+{%- endif -%}
+
 <script>
   window.addEventListener('tabs:register', () => {
     let { activeClass } = CONFIG.comments;

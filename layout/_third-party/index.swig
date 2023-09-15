@@ -19,3 +19,7 @@
 {% if theme.google_adsense.enable %}
   {% include 'google_adsense.swig' %}
 {% endif %}
+
+{% if theme.cusdis.app_id %}
+  {%include 'comments/cusdis.swig' %}
+{% endif %}
