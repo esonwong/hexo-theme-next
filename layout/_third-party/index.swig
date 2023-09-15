@@ -15,3 +15,7 @@
 
 {% include 'tags/pdf.swig' %}
 {% include 'tags/mermaid.swig' %}
+
+{% if theme.google_adsense.enable %}
+  {% include 'google_adsense.swig' %}
+{% endif %}
