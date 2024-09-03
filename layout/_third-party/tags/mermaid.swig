@@ -1,7 +1,7 @@
 {%- if theme.mermaid.enable %}
-{%- set mermaid_uri = theme.vendors.mermaid or '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js' %}
+{%- set mermaid_uri = theme.vendors.mermaid or '//cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js' %}
 <script{{ pjax }}>
-if (document.querySelectorAll('pre.mermaid').length) {
+if (document.querySelectorAll('code.mermaid').length) {
   NexT.utils.getScript('{{ mermaid_uri }}', () => {
     mermaid.initialize({
       theme    : '{{ theme.mermaid.theme }}',
@@ -13,4 +13,12 @@ if (document.querySelectorAll('pre.mermaid').length) {
   }, window.mermaid);
 }
 </script>
+<style>
+pre:has(.mermaid) {
+  background: transparent;
+}
+code.highlight.mermaid {
+  background: transparent;
+}
+</style>
 {%- endif %}
