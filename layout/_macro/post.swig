@@ -218,26 +218,6 @@
     {%- if not is_index %}
       {{- next_inject('postBodyEnd') }}
 
-      {###################}
-      {### 红头条 BLOCK ###}
-      {###################}
-      <div class="red-topic"></div>
-      <script type="text/javascript">
-      var _xhh_selector = ".red-topic";
-
-      // 以下部分不要改动
-      var _xhh_service_url = 'https://xhh.club/summarize-this/';
-      (function() {
-      var smmr = document.createElement("script");
-      smmr.src = "https://xhh.club/static/js/summarize_this.js";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(smmr, s);
-      })();
-      </script>
-      {#######################}
-      {### END 红头条 BLOCK ###}
-      {#######################}
-
       {%- if post.reward_settings.enable %}
         {{ partial('_partials/post/post-reward.swig') }}
       {%- endif %}
